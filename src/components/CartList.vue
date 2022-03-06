@@ -1,6 +1,6 @@
 <template>
 <div class="wrapper">
-  <div class="products">
+  <div v-if="cart.length > 0" class="products">
     <div class="product" v-for="product in cart" :key="product.id">
       <div class="info">
         <h1>{{product.name}}</h1>
@@ -14,6 +14,9 @@
         <img :src="'/images/products/'+product.image">
       </div>
     </div>
+  </div>
+  <div v-else>
+    <h2>Cart is empty</h2>
   </div>
 </div>
 </template>
