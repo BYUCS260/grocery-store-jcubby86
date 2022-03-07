@@ -6,17 +6,17 @@
         <h1>{{product.name}}</h1>
         <p>{{product.country}}</p>
       </div>
+      <div class="image">
+        <img :src="'/images/products/'+product.image">
+      </div>
       <div class="price">
         <h2>{{product.price}}</h2>
         <button @click.prevent="removeFromCart(product)" class="auto">Remove</button>
       </div>
-      <div class="image">
-        <img :src="'/images/products/'+product.image">
-      </div>
     </div>
   </div>
   <div v-else>
-    <h2>Cart is empty</h2>
+    <h3>Cart is empty</h3>
   </div>
 </div>
 </template>

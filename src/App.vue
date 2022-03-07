@@ -22,6 +22,11 @@
     </div>
   </div>
   <router-view />
+  <div class="footer">
+    <a href="https://github.com/BYUCS260/grocery-store-jcubby86">
+      <h5>View GitHub Repository here</h5>
+    </a>
+  </div>
 </div>
 </template>
 
@@ -78,5 +83,26 @@ body {
 
 .browse {
   margin-right: 50px;
+}
+
+.footer{
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid #F2921D 5px;
+    margin-left: -100px;
+}
+.footer a{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.footer a:hover{
+    text-decoration: underline;
 }
 </style>
